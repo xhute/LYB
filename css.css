@@ -1,0 +1,84 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #000000;
+}
+input{
+	border: none;
+	padding: 0px 0px 0px 0px;
+	font-size: 18px;
+	border-radius: 5px;
+	margin-bottom:5px;
+}
+
+.btn{
+	font-size: 18px;
+	color: white;
+	width: 98%;
+	height: 40px;
+	background-color: green;
+	border-color: green;
+	border: 1.5px solid green ;
+}
+
+.viewwrap{
+	background-color: black;
+	margin:0 auto;
+	position:relative;
+	font-family: tahoma,Microsoft Yahei;
+	font-size: 18px;
+	color: white;
+	display:none;
+}
+.userCard{
+	text-align: center;
+	margin-bottom: 20px;
+}
+.userCardSub{
+	background-color: white;
+	display: inline-block;
+	width: 390px;
+	height: 60px;
+	border-radius: 5px;
+	position: relative;
+}
+
+.userCardSub input{
+	width: 325px;
+	height: 60px;
+	position: absolute;
+	right: 0px;
+}
+
+.bg_user{
+	background:url("bg_user.jpg") no-repeat;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	top:20px;
+	left: 15px;
+	position: absolute;
+}
+.bg_pass{
+	background:url("bg_password.jpg") no-repeat;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	top:20px;
+	left: 20px;
+	position: absolute;
+}
+.bg_split{
+	background: url("bg_split.jpg") no-repeat;
+	display: inline-block;
+	position: absolute;
+	left: 61px;
+	top: 5px;
+	width: 2px;
+	height: 50px;
+}
+.result{
+	color:white;
+}

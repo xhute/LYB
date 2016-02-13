@@ -1,0 +1,21 @@
+程序：goldcode.php
+
+功能：生成兑换码
+输入：act=gencode&pwd=123&rmb=1&value=100&amount=1&game=兵锋王座&room=兵者之心
+输出：{ "ret":"0",
+	"codes":["asdfadsf","qerqwer"]
+}
+0	成功
+1	密码不正确
+2	game/room不存在
+
+功能：使用兑换码
+输入：act=usecode&code=adfadsf&user=xhute&game=兵锋王座&room=兵者之心
+输出：
+0	成功
+1	code不存在
+2	code与game\room对不上
+3	code已使用
+4	user不存在
+5	其它错误
+

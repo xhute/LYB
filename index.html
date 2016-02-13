@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<title>兵锋王座
+</title>
+<link rel="stylesheet" type="text/css" href="css.css" />
+<script src="jquery.min.js"></script>
+</head>
+<body>
+<form name="goodsForm" id="goodsForm" action="#">
+<input id="yuan" name="yuan" type="text" placeholder="金额（元）"><br/>
+<input id="amount" name="amount" type="text" placeholder="兑换码数量"><br/>
+<input id="pwd" name="pwd" type="password" placeholder="管理密码"><br/>
+<input  id="btnOK" type="button" class="btn" value="确认生成"  /><br/>
+</form>
+<br/>
+<div id="result" class='result'>结果显示区</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#btnOK').on('click',function(){
+		var yuan = $('#yuan').val();
+		var amount = $('#amount').val();
+		var pwd = $('#pwd').val();
+		var url= "goldcode.php?act=gencode&pwd="+pwd+"&rmb=1&value="+yuan+"&amount="+amount+"&game=兵锋王座&room=兵者之心";
+		
+		$('#result').html("");
+		$.getJSON(url,function(data){
+			if( 0 == data.ret){ //成功
+				var codes = data.codes;
+				$.each(codes, function(i, field){
+					$('#result').append("<br/>"+field);
+				});
+			}else{
+				$('#result').html("出错了");
+			}
+		}); 
+	/*	return false;*/
+	});
+})
+</script>
+
+</body>
+</html>
